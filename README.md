@@ -50,12 +50,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 ## Add docker to sudo group ↷
 ```
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
-sudo chmod 777 /var/run/docker.sock
+sudo groupadd docker && sudo usermod -aG docker $USER && newgrp docker && sudo chmod 777 /var/run/docker.sock
 ```
-
 ## Install ansible ↷
 ```
 sudo apt update -y
